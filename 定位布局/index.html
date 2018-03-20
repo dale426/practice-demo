@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平居中的方法</title>
+	<style>
+		.root{
+			position: relative;
+			margin: 100px auto;
+			width: 600px;
+			height: 600px;
+			border: 5px solid blue;
+		}
+		.root2{
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+			background: yellow;
+		}
+/* 	
+		.parent{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+ */
+/*  		.root{
+ 			width: fit-content;
+ 			margin: 0 auto;
+ 			border: 1px solid red;
+ 		}
+ */
+/* 		.son{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%)
+		} */
+/* 		.son{
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		} */
+
+		.test{
+			width: 400px;
+			height: 400px;
+			background: pink;
+			margin: 0 auto;
+		}
+/* 		.parent::after, .son{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.parent::after{
+			content: 'hahha';
+			height: 100%;
+		} */
+
+		.parent{
+			display: table;
+		}
+		.son{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+<!-- 	<div class="root parent">
+		<div class="root2 son">子容器</div>
+	</div> -->
+
+	<div class="test parent">
+		<span class="test2 son">这是一个行内块级元素</span>
+	</div>
+</body>
+</html>

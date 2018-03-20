@@ -1,0 +1,86 @@
+首页
+
+首页搜索
+0 -103px  60 36 首页logo图标
+-60px -109px 20 20 首页搜索图标
+rgba(201,21,35,0) 首页头部背景颜色 
+
+首页广告
+
+
+首页导航栏
+138px nav 高度
+0 3.125%  nav padding
+40px 图标
+
+秒杀
+16 20 闹钟图标
+64%   图片宽度
+#f15353	价格颜色
+
+商品标题 3 12 #d8505c before
+
+
+分类
+
+头部背景 header-bg.png
+头部  返回按钮   -20px 0
+头部  菜单按钮   -60px 0
+
+<ul>
+                <li class=""><a href="javascript:;">热门推荐</a></li>
+                <li class="now"><a href="javascript:;">潮流女装</a></li>
+                <li class=""><a href="javascript:;">品牌男装</a></li>
+                <li class=""><a href="javascript:;">内衣配饰</a></li>
+                <li class=""><a href="javascript:;">家用电器</a></li>
+                <li class=""><a href="javascript:;">电脑办公</a></li>
+                <li class=""><a href="javascript:;">手机数码</a></li>
+                <li class=""><a href="javascript:;">母婴频道</a></li>
+                <li class=""><a href="javascript:;">图书</a></li>
+                <li class=""><a href="javascript:;">家居家纺</a></li>
+                <li class=""><a href="javascript:;">居家生活</a></li>
+                <li class=""><a href="javascript:;">家具建材</a></li>
+                <li class=""><a href="javascript:;">热门推荐</a></li>
+                <li class=""><a href="javascript:;">潮流女装</a></li>
+                <li class=""><a href="javascript:;">品牌男装</a></li>
+                <li class=""><a href="javascript:;">内衣配饰</a></li>
+                <li class=""><a href="javascript:;">家用电器</a></li>
+                <li class=""><a href="javascript:;">电脑办公</a></li>
+                <li class=""><a href="javascript:;">手机数码</a></li>
+                <li class=""><a href="javascript:;">母婴频道</a></li>
+                <li class=""><a href="javascript:;">图书</a></li>
+                <li class=""><a href="javascript:;">家居家纺</a></li>
+                <li class=""><a href="javascript:;">居家生活</a></li>
+                <li class=""><a href="javascript:;">家具建材</a></li>
+            </ul>
+
+
+购物车
+
+盖子 20 5 
+篓子 18 18
+
+
+
+
+
+
+
+
+
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+

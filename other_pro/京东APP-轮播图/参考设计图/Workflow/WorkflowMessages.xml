@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wm:workflowmessages version="1" xmlns="urn:www.corel.com-ipm-dynamicmessages" xmlns:wm="urn:www.corel.com-ipm-workflowmessages">
+	<wm:workflowmessage wm:name="trial_page" id="1241638657252" visibility="/systeminfo[@online=&quot;true&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot;  and number(@trialdaysleft) &gt;= 15 and number(@trialdaysleft) &lt;= 180 and (@serialtype=&quot;8&quot;)]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1241638657252\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="trial_page" id="1241638657696" visibility="/systeminfo[@online=&quot;false&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot;  and number(@trialdaysleft) &gt;= 1 and number(@trialdaysleft) &lt;= 14 and (@serialtype=&quot;8&quot;)]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1241638657696\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="trial_page" id="1241638657325" visibility="/systeminfo[@online=&quot;false&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot;  and number(@trialdaysleft) &gt;= 15 and number(@trialdaysleft) &lt;= 180 and (@serialtype=&quot;8&quot;)]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1241638657325\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="trial_page" id="1241638657783" visibility="/systeminfo[@online=&quot;false&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot;  and number(@trialdaysleft) &gt;= -99999 and number(@trialdaysleft) &lt;= 0 and (@serialtype=&quot;8&quot;)]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1241638657783\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="purchase_extension_invoke_page" id="1209150462573" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1209150462573\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="purchase_offline_page_enter_serialnumber" id="1206035158374" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1206035158374\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="extension_connect_page" id="1209150463162" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1209150463162\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="reg_confirmation_page" id="1205857636881" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1205857636881\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="purchase_first_page" id="1205857636161" visibility="/systeminfo[@online=&quot;false&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot; and number(@trialdaysleft)&lt;=0 and (@serialtype=&quot;1&quot; or @serialtype=&quot;2&quot; or @serialtype=&quot;3&quot; or @serialtype=&quot;4&quot; or @serialtype=&quot;5&quot;) and @product=&quot;1&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1205857636161\body.htm"></content>
+		</contents>
+		<downloads>
+			<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/168/637/mainimage_activation_EN.jpg" localpath="1205857636161\mainimage_activation_EN.jpg"/>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="purchase_first_page" id="1205358652478" visibility="/systeminfo[@online=&quot;false&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot; and number(@trialdaysleft)&lt;=30 and number(@trialdaysleft)&gt;0 and (@serialtype=&quot;1&quot; or @serialtype=&quot;2&quot; or @serialtype=&quot;3&quot; or @serialtype=&quot;4&quot; or @serialtype=&quot;5&quot;) and @product=&quot;1&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1205358652478\body.htm"></content>
+		</contents>
+		<downloads>
+			<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/390/672/mainimage_activation,32.JPG" localpath="1205358652478\mainimage_activation,32.JPG"/>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="purchase_first_page" id="1205358652437" visibility="/systeminfo[@online=&quot;true&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot; and number(@trialdaysleft)&lt;=30 and number(@trialdaysleft)&gt;0 and (@serialtype=&quot;1&quot; or @serialtype=&quot;2&quot; or @serialtype=&quot;3&quot; or @serialtype=&quot;4&quot; or @serialtype=&quot;5&quot;) and @product=&quot;1&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1205358652437\body.htm"></content>
+		</contents>
+		<downloads>
+			<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/390/672/mainimage_activation,8.JPG" localpath="1205358652437\mainimage_activation,8.JPG"/>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="purchase_first_page" id="1205857636147" visibility="/systeminfo[@online=&quot;true&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot; and number(@trialdaysleft)&lt;=0 and (@serialtype=&quot;1&quot; or @serialtype=&quot;2&quot; or @serialtype=&quot;3&quot; or @serialtype=&quot;4&quot; or @serialtype=&quot;5&quot;) and @product=&quot;1&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1205857636147\body.htm"></content>
+		</contents>
+		<downloads>
+			<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/466/110/mainimage_activation2.jpg" localpath="1205857636147\mainimage_activation2.jpg"/>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="retrieve_key_select_serial_page" id="1329331492174" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1329331492174\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="purchase_method_page_1" id="1206035158457" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1206035158457\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="extension_connect_page_free" id="1216665850570" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1216665850570\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="purchase_method_page_2" id="1206035158473" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1206035158473\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="reg_conf_code_delivery_page" id="1210192725504" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1210192725504\body.htm"></content>
+		</contents>
+		<downloads>
+			<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/811/816/generic_blue_backgroundEN.jpg" localpath="1210192725504\generic_blue_backgroundEN.jpg"/>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="reg_welcome_page" id="1241638404828" visibility="/systeminfo[@online=&quot;false&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot; and @regtype=&quot;2&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1241638404828\body.htm"></content>
+		</contents>
+		<downloads>
+			<download url="" localpath="1241638404828\"/>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="reg_welcome_page" id="1241638404862" visibility="/systeminfo[@online=&quot;false&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot; and @regtype=&quot;0&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1241638404862\body.htm"></content>
+		</contents>
+		<downloads>
+			<download url="" localpath="1241638404862\"/>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="reg_welcome_page" id="1241638404845" visibility="/systeminfo[@online=&quot;true&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot; and @regtype=&quot;0&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1241638404845\body.htm"></content>
+		</contents>
+		<downloads>
+			<download url="" localpath="1241638404845\"/>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="reg_welcome_page" id="1241638404689" visibility="/systeminfo[@online=&quot;true&quot;] AND /productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot; and @regtype=&quot;2&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1241638404689\body.htm"></content>
+		</contents>
+		<downloads>
+			<download url="" localpath="1241638404689\"/>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="prereg_page" id="1208144863914" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1208144863914\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="enter_key_page" id="1206035158035" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1206035158035\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="activation_method_page" id="1206035158049" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1206035158049\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="purchase_offline_page_enter_activationcode" id="1206035158390" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1206035158390\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="ipm_signin_page" id="1279570802965" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1279570802965\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="activation_offline_page" id="1206035158283" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1206035158283\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="reg_options_page" id="1205857636867" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1205857636867\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="activation_info_page" id="1268336756837" visibility="/productmanifest/licenseinfolist/licenseinfo[@licenseid=&quot;540111125&quot; and (@serialtype=&quot;1&quot; or @serialtype=&quot;2&quot; or @serialtype=&quot;3&quot; or @serialtype=&quot;4&quot; or @serialtype=&quot;5&quot;) and string-length(@activationcode)&gt;0 and @product=&quot;0&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1268336756837\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="activation_info_page" id="1205358653517" visibility="/productmanifest/licenseinfolist/licenseinfo[ @licenseid=&quot;540111125&quot; and @serialtype=&quot;10&quot; and string-length(@activationcode)&gt;0 and @product=&quot;1&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1205358653517\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="activation_info_page" id="1205358653502" visibility="/productmanifest/licenseinfolist/licenseinfo[ @licenseid=&quot;540111125&quot; and (@serialtype=&quot;1&quot; or @serialtype=&quot;2&quot; or @serialtype=&quot;3&quot; or @serialtype=&quot;4&quot; or @serialtype=&quot;5&quot;) and string-length(@activationcode)&gt;0 and @product=&quot;1&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1205358653502\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="activation_info_page" id="1268336756862" visibility="/productmanifest/licenseinfolist/licenseinfo[ @licenseid=&quot;540111125&quot; and @serialtype=&quot;10&quot; and string-length(@activationcode)&gt;0 and @product=&quot;0&quot;]" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1268336756862\body.htm"></content>
+		</contents>
+		<downloads>
+		</downloads>
+	</wm:workflowmessage>
+	<wm:workflowmessage wm:name="reg_thank_you_page" id="1205857636921" modified-timestamp="0">
+		<contents>
+			<content type="" localpath="1205857636921\body.htm"></content>
+		</contents>
+		<downloads>
+			<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/830/261/generic_blue_background.jpg" localpath="1205857636921\generic_blue_background.jpg"/>
+		</downloads>
+	</wm:workflowmessage>
+	<downloads>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/446/443/Bottom.jpg" localpath="shared\Images\frame\Bottom.jpg" name="Bottom.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/772/149/BottomRight.jpg" localpath="shared\Images\frame\BottomRight.jpg" name="BottomRight.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/799/779/BotttomLeft.jpg" localpath="shared\Images\frame\BotttomLeft.jpg" name="BotttomLeft.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/17/464/LeftSide.jpg" localpath="shared\Images\frame\LeftSide.jpg" name="LeftSide.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/704/452/MsgBubble.htm" localpath="ui\MsgBubble.htm" name="MsgBubble.htm"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/230/726/RightSide.jpg" localpath="shared\Images\frame\RightSide.jpg" name="RightSide.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/936/394/Top.jpg" localpath="shared\Images\frame\Top.jpg" name="Top.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/463/604/TopLeft.jpg" localpath="shared\Images\frame\TopLeft.jpg" name="TopLeft.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/858/974/TopRight.jpg" localpath="shared\Images\frame\TopRight.jpg" name="TopRight.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/770/1004/spacer.gif" localpath="shared\Images\spacer.gif" name="Transparent_bg_img"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/185/30/accesserr_dialog.htm" localpath="ui\accesserr_dialog.htm" name="accesserr_dialog"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/573/268/generic_IPMbanner.jpg" localpath="shared\Images\banner.jpg" name="banner.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/345/580/BITS_LEARNMORE.html" localpath="ui\BITS_LEARNMORE.html" name="bits_learn_more_page"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/713/797/button_blue_leftcap.gif" localpath="shared\Images\Button\button_blue_leftcap.gif" name="button_blue_leftcap.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/483/360/button_blue_middle.gif" localpath="shared\Images\Button\button_blue_middle.gif" name="button_blue_middle.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/516/202/button_blue_rightcap.gif" localpath="shared\Images\Button\button_blue_rightcap.gif" name="button_blue_rightcap.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/178/444/btnBuyNow_en.gif" localpath="shared\Images\Button\button_buynowlarge.gif" name="button_buynowlarge.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/696/608/button_green_leftcap.gif" localpath="shared\Images\Button\button_green_leftcap.gif" name="button_green_leftcap3.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/20/1015/button_green_middle.gif" localpath="shared\Images\Button\button_green_middle.gif" name="button_green_middle.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/1013/486/button_green_rightcap.gif" localpath="shared\Images\Button\button_green_rightcap.gif" name="button_green_rightcap.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/85/70/cancelconfirm_dlg_en.htm" localpath="ui\cancelconfirm_dlg.htm" name="cancelconfirm_dlg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/963/913/ccc_v2dark.css" localpath="shared\ccc.css" name="ccc_css"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/788/37/ccc,0.js" localpath="shared\ccc.js" name="ccc_js"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/7/45/cgsx6_subscription_background2.jpg" localpath="shared\Images\cgsx6_subscription_background2.jpg" name="cgsx6_subscription_background2"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/50/981/checkforupdates_EN.htm" localpath="ui\checkforupdates.htm" name="checkforupdates"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/400/2/contact_us.jpg" localpath="shared\Images\contact_us.jpg" name="contact_us.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/1005/750/container_v2.htm" localpath="container.htm" name="container"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/699/408/dinstalldlg.htm" localpath="ui\dinstalldlg.htm" name="dinstalldlg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/994/43/downloaddlg.html" localpath="ui\downloaddlg.html" name="downloaddlg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/531/1010/background_genericblue,0.jpg" localpath="shared\Images\generic_blue_background.jpg" name="generic_blue_background.jpg"/>
+		<!-- process skin css -->
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/804/580/1248383926732.txt" localpath="genericSkin\1248383926732.txt.css"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/457/13/green1.png" localpath="shared\Images\TrialCounter\green1.png" name="green1.png"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/436/898/grey_bkg.gif" localpath="shared\Images\TrialCounter\grey_bkg.gif" name="grey_bkg.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/149/384/guarantee_red.png" localpath="shared\Images\guarantee_red.png" name="guarantee_red.png"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/398/977/winstalldlg.htm" localpath="ui\winstalldlg.htm" name="installdlg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/177/529/jquery-all-1.8.0.min.js" localpath="shared\jquery.js" name="jquery"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/596/917/large_blue_btn_center.png" localpath="shared\Images\Button\large_blue_btn_center.png" name="large_blue_btn_center.png"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/646/689/large_blue_btn_left_side.png" localpath="shared\Images\Button\large_blue_btn_left_side.png" name="large_blue_btn_left_side.png"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/793/184/large_blue_btn_right_side.png" localpath="shared\Images\Button\large_blue_btn_right_side.png" name="large_blue_btn_right_side.png"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/557/853/localerr_dlg.htm" localpath="ui\localerr_dlg.htm" name="localerr_dlg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/597/875/day30_EN1.jpg" localpath="shared\Images\mainimage_UP1default.jpg" name="mainimage_UP1.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/27/802/day14_EN1,0.jpg" localpath="shared\Images\mainimage_UP2default.jpg" name="mainimage_UP2.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/112/528/day0_EN1,0.jpg" localpath="shared\Images\mainimage_UP3default.jpg" name="mainimage_UP3.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/714/982/background_outtosea.jpg" localpath="shared\Images\mainimage_UP4default.jpg" name="mainimage_UP4.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/972/541/background_canyonphoto.jpg" localpath="shared\Images\mainimage_UP6default.jpg" name="mainimage_UP6.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/381/11/TD_0_EN1,0.jpg" localpath="shared\Images\mainimage_UP7default.jpg" name="mainimage_UP7.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/117/1021/background_girlballoon.jpg" localpath="shared\Images\mainimage_UP8default.jpg" name="mainimage_UP8.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/597/875/day30_EN1,0.jpg" localpath="shared\Images\mainimage_activation1.jpg" name="mainimage_activation1.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/531/1010/background_genericblue.jpg" localpath="shared\Images\mainimage_activation2.jpg" name="mainimage_activation2.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/446/495/welcome_EN1,0.jpg" localpath="shared\Images\mainimage_reg.jpg" name="mainimage_reg.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/87/726/messagebox.htm" localpath="ui\messagebox.htm" name="messagebox"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/610/441/messaging_all_v2.js" localpath="shared\messaging.js" name="messaging"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/506/70/msgarchive_EN.htm" localpath="ui\msgarchive.htm" name="msgarchive"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/521/772/msgcenter.htm" localpath="ui\msgcenter.htm" name="msgcenter"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/153/214/msgxpath_all.js" localpath="shared\msgxpath.js" name="msgxpath.js"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/584/970/noenoughspace_dlg.htm" localpath="ui\noenoughspace_dlg.htm" name="noenoughspace_dlg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/818/701/noupdates_EN.htm" localpath="ui\noupdates.htm" name="noupdates"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/41/180/optinout.htm" localpath="ui\optinout.htm" name="optinout"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/456/655/pb.gif" localpath="shared\Images\TrialCounter\pb.gif" name="pb.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/740/367/pb_end.gif" localpath="shared\Images\TrialCounter\pb_end.gif" name="pb_end.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/914/246/pb_endorange.gif" localpath="shared\images\TrialCounter\pb_endorange.gif" name="pb_endorange.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/25/54/pb_endred.gif" localpath="shared\images\TrialCounter\pb_endred.gif" name="pb_endred.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/555/639/pb_start.gif" localpath="shared\Images\TrialCounter\pb_start.gif" name="pb_start.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/409/466/pb_startorange.gif" localpath="shared\images\TrialCounter\pb_startorange.gif" name="pb_startorange.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/882/31/pb_startred.gif" localpath="shared\images\TrialCounter\pb_startred.gif" name="pb_startred.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/886/935/pborange.gif" localpath="shared\Images\TrialCounter\pborange.gif" name="pborange.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/693/719/pbred.gif" localpath="shared\images\TrialCounter\pbred.gif" name="pbred.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/160/612/progress_ani.gif" localpath="shared\Images\progress_ani.gif" name="progress_ani.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/941/5/progress_ani_stop.gif" localpath="shared\Images\progress_ani_stop.gif" name="progress_ani_stop.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/853/748/PushMsg_EN_new.htm" localpath="ui\PushMsg.htm" name="pushmsg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/444/858/pushmsg.css" localpath="ui\pushmsg.css" name="pushmsg_css"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/462/382/pushmsg_all.js" localpath="ui\pushmsg.js" name="pushmsg_js"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/251/581/red1.png" localpath="shared\Images\TrialCounter\red1.png" name="red1.png"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/557/952/installnow_now.png" localpath="shared\Images\installoption\Installnow_now.png" name="redbuttoncenter"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/38/435/installnow_left.png" localpath="shared\Images\installoption\Installnow_left.png" name="redbuttonleft"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/883/675/installnow_right.png" localpath="shared\Images\installoption\Installnow_right.png" name="redbuttonright"/>
+		<!-- process skin css -->
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/741/961/1248383926634.txt" localpath="regSKin\1248383926634.txt.css"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/809/217/round_btn_body.jpg" localpath="shared/Images/Button/round_btn_body.jpg" name="round_btn_body.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/782/260/round_btn_left.jpg" localpath="shared/Images/Button/round_btn_left.jpg" name="round_btn_left.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/507/560/round_btn_right.jpg" localpath="shared/Images/Button/round_btn_right.jpg" name="round_btn_right.jpg"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/462/482/separator_daysleft.gif" localpath="shared\Images\TrialCounter\separator_daysleft.gif" name="separator_daysleft.gif"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/163/183/serviceerr_dlg.htm" localpath="ui\serviceerr_dlg.htm" name="serviceerr_dlg"/>
+		<!-- process skin css -->
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/891/584/1241638714996.txt" localpath="trialSkin\1241638714996.txt.css"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/210/980/updatenotentitled.htm" localpath="ui\updatenotentitled.htm" name="updatenotentitled"/>
+		<download url="http://stg-mc-corel-com/futuretense_cs/ccurl/30/478/workflowdef_v2.xml" localpath="workflowdef.xml" name="workflowdef"/>
+	</downloads>
+</wm:workflowmessages>
