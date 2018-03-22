@@ -1,0 +1,5 @@
+add a line content;
+
+modify 【 修改了 然后 add 】
+
+不提交 然后进行 检出 checkout
