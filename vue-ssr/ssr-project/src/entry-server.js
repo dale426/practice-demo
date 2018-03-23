@@ -1,5 +1,5 @@
-import Vue from 'vue';
-import App from './App.vue';
+// import Vue from 'vue'
+// import App from './App.vue'
 import createApp from './main'
 
 export default context => {
@@ -15,7 +15,8 @@ export default context => {
       const matchedComponents = router.getMatchedComponents()
       // 匹配不到的路由，执行 reject 函数，并返回 404
       if (!matchedComponents.length) {
-        return reject({ code: 404 })
+        // router.push('/home/c2')  // 无匹配路由跳转到 404
+        return reject("服务端无匹配路由")
       }
       // Promise 应该 resolve 应用程序实例，以便它可以渲染
       resolve(app)

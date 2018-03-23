@@ -10,10 +10,17 @@ Vue.use(Router)
 
 export function createRouter() {
   return new Router({
+    // 使用html5的history模式，全路径匹配方案
+    mode: 'history',
     routes: [
       {
         path: '/',
         name: 'HelloWorld',
+        component: HelloWorld
+      },
+      {
+        path: '*',
+        name: 'HelloWorld2',
         component: HelloWorld
       },
       {

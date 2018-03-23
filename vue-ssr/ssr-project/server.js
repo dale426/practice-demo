@@ -11,8 +11,10 @@ const renderer = require('vue-server-renderer').createBundleRenderer(bundle, {
 });
 
 // console.log('createApp', createApp)
-server.get('/home', (req, res) => {
+server.get('*', (req, res) => {
     const context = { url: req.url }
+    console.log( Math.random() * 1000 << 5,req.url)
+
     createApp(context).then( app => {
         renderer.renderToString(context, (err, html) => {
             if (err) {
@@ -24,9 +26,9 @@ server.get('/home', (req, res) => {
             }
             res.end(html);
         })
-    }).catch( (err) => {
+    }).catch( err => {
         console.log("error",err)
-        res.status(404).end(err)
+        res.status(404).end("")
     })
 });
 

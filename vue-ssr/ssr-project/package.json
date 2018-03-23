@@ -11,6 +11,7 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js",
+    
     "buildAll": "webpack --config build/webpack.dev.conf.js && webpack --config build/webpack.server.conf.js",
     "buildClient": "webpack --config build/webpack.dev.conf.js",
     "server": "webpack --config build/webpack.server.conf.js"
