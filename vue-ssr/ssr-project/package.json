@@ -11,7 +11,6 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js",
-    
     "buildAll": "webpack --config build/webpack.dev.conf.js && webpack --config build/webpack.server.conf.js",
     "buildClient": "webpack --config build/webpack.dev.conf.js",
     "server": "webpack --config build/webpack.server.conf.js"
@@ -22,6 +21,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "axios": "^0.18.0",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -72,6 +72,7 @@
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",

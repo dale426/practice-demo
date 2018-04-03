@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const server = express();
-const createApp = require('./dist/server.js').default
+const serverApp = require('./dist/server.js').default
 server.use(express.static('dist'));
 
 const bundle = fs.readFileSync(path.resolve(__dirname, 'dist/server.js'), 'utf-8');
@@ -11,11 +11,12 @@ const renderer = require('vue-server-renderer').createBundleRenderer(bundle, {
 });
 
 // console.log('createApp', createApp)
-server.get('*', (req, res) => {
+server.get('/home', (req, res) => {
     const context = { url: req.url }
+    
     console.log( Math.random() * 1000 << 5,req.url)
 
-    createApp(context).then( app => {
+    serverApp(context).then( app => {
         renderer.renderToString(context, (err, html) => {
             if (err) {
                 if (err.code === 404) {
