@@ -29,7 +29,7 @@ server.get('/home', (req, res) => {
         })
     }).catch( err => {
         console.log("error",err)
-        res.status(404).end("")
+        res.status(404).end(err)
     })
 });
 

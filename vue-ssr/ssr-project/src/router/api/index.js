@@ -9,10 +9,4 @@ export function queryData () {
       name: 'demoData'
     }
   })
-/*     .then(function (res) {
-      resolve
-    })
-    .catch(function (error) {
-      console.log(error)
-    }) */
 }

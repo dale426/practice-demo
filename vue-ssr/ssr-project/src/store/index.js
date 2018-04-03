@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { queryData } from '../router/api'
-import { resolve } from '_tsconfig@7.0.0@tsconfig';
+// import { resolve } from '_tsconfig@7.0.0@tsconfig';
 
 Vue.use(Vuex)
 
