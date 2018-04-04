@@ -2,6 +2,7 @@
   <div>
     <h1>{{msg}}</h1>
     <button @click="goHome">go to home page</button>
+    <button @click="goPageNo">go to home 404</button>
   </div>
 </template>
 
@@ -16,7 +17,12 @@ export default {
   methods: {
     goHome () {
       this.$router.push({path: '/home'})
+    },
+    goPageNo() {
+      this.$router.push({path: '/404'})
+      
     }
+
   }
 }
 </script>

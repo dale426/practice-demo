@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/Home'
 import Child from '@/components/Child'
 import Child2 from '@/components/Child2'
+import Page404 from '../components/Page404'
 
 
 Vue.use(Router)
@@ -19,17 +20,17 @@ export function createRouter() {
         component: HelloWorld
       },
       {
-        path: '/hello',
-        name: 'HelloWorld2',
-        component: HelloWorld
+        path: '/404',
+        name: 'page404',
+        component: Page404
       },
       {
         path: '/home',
         name: 'home',
         component: Home,
         children: [
-          { path: 'c1', title: '主项目操作', name: 'child',  component: resolve => { require(['@/components/Child.vue'], resolve)} },
-          { path: 'c2', title: '主项目操作', name: 'child2',  component: resolve => { require(['@/components/Child2.vue'], resolve)} },
+          { path: 'c1', title: '主项目操作', name: 'child',  component: Child},
+          { path: 'c2', title: '主项目操作', name: 'child2',  component: Child2},
         ]
 
       },
