@@ -18,7 +18,7 @@ export default context => {
       // 匹配不到的路由，执行 reject 函数，并返回 404
       if (!matchedComponents.length) {
         // router.push('/home/c2')  // 无匹配路由跳转到 404
-        return reject("服务端无匹配路由")
+        return reject("服务端无匹配路由！")
       }
       // console.log('匹配到的路由',matchedComponents.length)
       // 对所有匹配的路由组件调用 `asyncData()`

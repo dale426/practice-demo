@@ -13,9 +13,9 @@
 <script>
 export default {
   name: 'home',
-  asyncData ({ store, route }) {
+  asyncData ({ store, route}) {
     // 触发 action 后，会返回 Promise
-    return store.dispatch('fetchItem', route.params.id)
+    return store.dispatch('fetchItem', {id: 'home1'})
   },
   data() {
       return {
@@ -30,8 +30,7 @@ export default {
   computed: {
     // 从 store 的 state 对象中的获取 item。
     item () {
-      // console.log(this.$store.state.items[this.$route.params.id])
-      return this.$store.state.items[this.$route.params.id]
+      return this.$store.state.items['home1']
     }
   },
 }

@@ -11,7 +11,7 @@ const renderer = require('vue-server-renderer').createBundleRenderer(bundle, {
 });
 
 // console.log('createApp', createApp)
-server.get('/home', (req, res) => {
+server.get('*', (req, res) => {
     const context = { url: req.url }
     
     console.log( Math.random() * 1000 << 5,req.url)
