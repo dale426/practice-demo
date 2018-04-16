@@ -2,34 +2,24 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
-const vueLoaderConfig = require('./vue-loader.conf')
+
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
+
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
-
-const createLintingRule = () => ({
-  test: /\.(js|vue)$/,
-  loader: 'eslint-loader',
-  enforce: 'pre',
-  include: [resolve('src'), resolve('test')],
-  options: {
-    formatter: require('eslint-friendly-formatter'),
-    emitWarning: !config.dev.showEslintErrorsInOverlay
-  }
-})
+const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  // entry: {
-  //   app: './src/main.js'
-  // },
   output: {
-    path: config.build.assetsRoot,
-    filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].[chunkhash].js',
+    publicPath: '/dist/',
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -39,17 +29,26 @@ module.exports = {
     }
   },
   module: {
+    noParse: /es6-promise\.js$/, // avoid webpack shimming process
     rules: [
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: vueLoaderConfig
-      },
+        options: {
+            loaders: {
+                css: 'vue-style-loader!css-loader',
+                less: 'vue-style-loader!css-loader!less-loader'
+            },
+            postLoaders: {
+                html: 'babel-loader'
+            }
+        }
+    },
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        exclude: /node_modules/
+        // include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -74,7 +73,8 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      { test: /\.css$/, loader: "style-loader!css-loader" },
     ]
   },
   node: {
@@ -88,5 +88,20 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+/*   plugins: isProd
+    ? [
+        new VueLoaderPlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+          compress: { warnings: false }
+        }),
+        new webpack.optimize.ModuleConcatenationPlugin(),
+        new ExtractTextPlugin({
+          filename: 'common.[chunkhash].css'
+        })
+      ]
+    : [
+        new VueLoaderPlugin(),
+        new FriendlyErrorsPlugin()
+      ] */
 }
