@@ -102,17 +102,18 @@ export default class SimpleDemo {
         };
     
         var onError = function(xhr) {};
-
+        
+        // THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
         const mtlLoader = new MTLLoader()
-        mtlLoader.setPath('assets/Box_VR/');
-        mtlLoader.load('Box.mtl', function (materials) {
+        mtlLoader.setPath('assets/obj/');
+        mtlLoader.load('male02.mtl', function (materials) {
             materials.preload();
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
-            objLoader.setPath('assets/Box_VR/');
-            objLoader.load('box.obj', function (object) {
+            objLoader.setPath('assets/obj/');
+            objLoader.load('male02.obj', function (object) {
 
-                object.position.y = -0.5;
+                // object.position.y = -0.5;
                 scene.add(object);
 
             }, onProgress, onError);
@@ -126,9 +127,9 @@ export default class SimpleDemo {
         controls.zoomSpeed = 5
         controls.panSpeed = 2
         controls.onZoom = false
-        controls.noPan = false
-        controls.staticMoving = true
-        controls.dynamicDampingFactor = 0.3
+        controls.enablePan = false
+        controls.enableDamping = true
+        controls.dampingFactor = 0.3
         controls.minDistance = 10
         controls.maxDistance = 800
     }

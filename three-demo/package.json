@@ -20,11 +20,12 @@
     "inline-source-map": "^0.6.2",
     "three-mtl-loader": "^1.0.2",
     "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^2.7.1",
+    "three-obj-loader": "^1.1.2"
   },
   "dependencies": {
     "stats.js": "^0.17.0",
-    "three": "^0.86.0",
+    "three": "^0.87.1",
     "three-mtl-loader": "^1.0.2",
     "three-obj-loader": "^1.1.2",
     "three-orbit-controls": "^82.1.0"
