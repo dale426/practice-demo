@@ -1,11 +1,11 @@
 import * as THREE from 'three'
 import stats from 'stats.js'
 import initOrbitControls from 'three-orbit-controls'
-import OBJLoader from 'three-obj-loader'
+// import OBJLoader from 'three-obj-loader'
 import MTLLoader from 'three-mtl-loader'
-
+import OBJLoader from '../three/OBJLoader';
 OBJLoader(THREE)
-// MTLLoader(THREE)
+
 const OrbitControls = initOrbitControls(THREE)
 const {
     WebGLRenderer,
@@ -64,21 +64,31 @@ export default class SimpleDemo {
     }
     initSence() {
         const scene = this.scene = new Scene()
-        scene.background = new Color(0x333333)
+        scene.background = new Color(0xffffff)
     }
 
     initCamera() {
         const camera = this.camera = new PerspectiveCamera(70, this.options.width / this.options.height, 1, 10000)
-        camera.position.set(0, 50, 50)
+        // camera.position.set(0, 50, 50)
+        camera.position.z = 250;
         camera.lookAt(new Vector3(0, 0, 0))
         this.scene.add(camera)
     }
 
 
     initLight() {
-        const light = this.light = new DirectionalLight()
-        light.position.set(0, 20, 20)
-        this.camera.add(light)
+        // 环境光
+        var ambientLight = new THREE.AmbientLight(0xcccccc, 0.5);
+        this.scene.add(ambientLight);
+
+        // 平行光
+        // const light = this.light = new DirectionalLight()
+        // light.position.set(0, 20, 20)
+        
+        // 点光
+        const pointLight = new THREE.PointLight(0xffffff, 0.5);
+        pointLight.position.set(0, 2000, 2000)
+        this.camera.add(pointLight)
     }
 
     initSeat() {
@@ -105,15 +115,16 @@ export default class SimpleDemo {
         
         // THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
         const mtlLoader = new MTLLoader()
-        mtlLoader.setPath('assets/obj/');
-        mtlLoader.load('male02.mtl', function (materials) {
+        mtlLoader.setPath('assets/ill/');
+        mtlLoader.load('demo4.mtl', function (materials) {
             materials.preload();
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
-            objLoader.setPath('assets/obj/');
-            objLoader.load('male02.obj', function (object) {
+            objLoader.setPath('assets/ill/');
+            objLoader.load('demo4.obj', function (object) {
 
                 // object.position.y = -0.5;
+                // object.position.y = - 95;
                 scene.add(object);
 
             }, onProgress, onError);
