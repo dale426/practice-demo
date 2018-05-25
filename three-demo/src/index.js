@@ -1,12 +1,15 @@
-import * as THREE from 'three'
-import stats from 'stats.js'
-import initOrbitControls from 'three-orbit-controls'
-// import OBJLoader from 'three-obj-loader'
-import MTLLoader from 'three-mtl-loader'
-import OBJLoader from '../three/OBJLoader';
-OBJLoader(THREE)
+import * as THREE from 'three';
+import stats from 'stats.js';
+import initOrbitControls from 'three-orbit-controls';
+import OBJLoader from 'three-obj-loader';
 
-const OrbitControls = initOrbitControls(THREE)
+import MTLLoader from 'three-mtl-loader';
+
+
+// import OBJLoader from '../three/OBJLoader';
+OBJLoader(THREE);
+
+const OrbitControls = initOrbitControls(THREE);
 const {
     WebGLRenderer,
     Scene,
@@ -78,22 +81,22 @@ export default class SimpleDemo {
 
     initLight() {
         // 环境光
-        var ambientLight = new THREE.AmbientLight(0xcccccc, 0.5);
+        var ambientLight = new THREE.AmbientLight(0xcccccc, 0.8);
         this.scene.add(ambientLight);
 
         // 平行光
-        // const light = this.light = new DirectionalLight()
-        // light.position.set(0, 20, 20)
+        const light = this.light = new DirectionalLight()
+        light.position.set(0, 20, 20)
         
         // 点光
-        const pointLight = new THREE.PointLight(0xffffff, 0.5);
-        pointLight.position.set(0, 2000, 2000)
-        this.camera.add(pointLight)
+        // const pointLight = new THREE.PointLight(0xffffff, 0.8);
+        // pointLight.position.set(0, 20, 20)
+        this.camera.add(light)
     }
 
     initSeat() {
         const loader = new THREE.OBJLoader()
-        loader.load('assets/box.obj', obj => {
+        loader.load('assets/Box001.obj', obj => {
             obj.traverse(child => {
                 if (child instanceof Mesh) {
                     child.material.side = THREE.DoubleSide
@@ -115,13 +118,13 @@ export default class SimpleDemo {
         
         // THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
         const mtlLoader = new MTLLoader()
-        mtlLoader.setPath('assets/ill/');
-        mtlLoader.load('demo4.mtl', function (materials) {
+        mtlLoader.setPath('../assets/obj001/');
+        mtlLoader.load('Box001.mtl', function (materials) {
             materials.preload();
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
-            objLoader.setPath('assets/ill/');
-            objLoader.load('demo4.obj', function (object) {
+            objLoader.setPath('../assets/obj001/');
+            objLoader.load('Box001.obj', function (object) {
 
                 // object.position.y = -0.5;
                 // object.position.y = - 95;

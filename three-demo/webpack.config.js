@@ -25,7 +25,7 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'lib'),
-    filename: `seating-plan-3d${isDevMode ? '' : '.min'}.js`
+    filename: `ill-3d${isDevMode ? '' : '.min'}.js`
   },
   plugins: plugins,
   module: {
