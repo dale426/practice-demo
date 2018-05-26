@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import stats from 'stats.js';
 import initOrbitControls from 'three-orbit-controls';
 import OBJLoader from 'three-obj-loader';
-
 import MTLLoader from 'three-mtl-loader';
 
 
@@ -71,7 +70,7 @@ export default class SimpleDemo {
     }
 
     initCamera() {
-        const camera = this.camera = new PerspectiveCamera(70, this.options.width / this.options.height, 1, 10000)
+        const camera = this.camera = new PerspectiveCamera(10, this.options.width / this.options.height, 1, 10000)
         // camera.position.set(0, 50, 50)
         camera.position.z = 250;
         camera.lookAt(new Vector3(0, 0, 0))
@@ -81,7 +80,7 @@ export default class SimpleDemo {
 
     initLight() {
         // 环境光
-        var ambientLight = new THREE.AmbientLight(0xcccccc, 0.8);
+        var ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
         this.scene.add(ambientLight);
 
         // 平行光
@@ -137,15 +136,15 @@ export default class SimpleDemo {
         const controls = this.controls = new OrbitControls(this.camera)
         controls.maxPolarAngle = 1.5
         controls.minPolarAngle = 0.5
-        controls.rotateSpeed = 5.0
-        controls.zoomSpeed = 5
+        controls.rotateSpeed = 1.0
+        controls.zoomSpeed = 2
         controls.panSpeed = 2
         controls.onZoom = false
         controls.enablePan = false
         controls.enableDamping = true
         controls.dampingFactor = 0.3
-        controls.minDistance = 10
-        controls.maxDistance = 800
+        controls.minDistance = 120
+        controls.maxDistance = 300
     }
 
     animate() {
