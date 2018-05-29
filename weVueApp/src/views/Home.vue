@@ -5,19 +5,19 @@
         <appheader title="积分购"></appheader>
 
         <!-- 轮播广告 -->
-        <carousel id="swiperView" classpage="app-pagination" :list="imglist" v-if="!loading">
-        </carousel>
+        <!-- <carousel id="swiperView" classpage="app-pagination" :list="imglist" v-if="!loading">
+        </carousel> -->
 
         <!-- TAB切换区 -->
-        <ul class="tab-menu v-flexbox" v-if="!loading">
+        <!-- <ul class="tab-menu v-flexbox" v-if="!loading">
             <li class="v-flexbox-item tab-item" v-for="item in tablist" @click="sordBy(item.key)" :class="[{active:$index === activeIndex}]">
                 <a v-if="$index > 2" @click.prevent="activeIndex=$index" :class="{ markUp: mark.up, markDown: mark.down }">{{item.title}}</a>
                 <a v-else @click.prevent="activeIndex=$index">{{item.title}}</a>
             </li>
-        </ul>
+        </ul> -->
 
         <!-- 商品内容区 -->
-        <section class="main-container" v-if="!loading">
+        <!-- <section class="main-container" v-if="!loading">
             <ul class="itemBox">
                 <li class="item" v-for="item in shoplist">
                     <a v-link="{name:'goods',query:{id:item.id}}">
@@ -37,13 +37,13 @@
                     </a>
                 </li>
             </ul>
-        </section>
+        </section> -->
 
         <!--模态框-->
-        <globalmodal :globalmodal.sync="globalModal"></globalmodal>
+        <!-- <globalmodal :globalmodal.sync="globalModal"></globalmodal> -->
 
         <!-- Loading -->
-        <loading :show="loading"></loading>
+        <!-- <loading :show="loading"></loading> -->
 
     </div>
 </template>
@@ -78,10 +78,10 @@
         }]
     })
 
-    import Appheader from './common/Header.vue';
-    import Loading from '../components/Loading.vue';
-    import Globalmodal from '../components/globalmodal.vue';
-    import Carousel from '../components/carousel.vue';
+    // import Appheader from './common/Header.vue';
+    // import Loading from '../components/Loading.vue';
+    // import Globalmodal from '../components/globalmodal.vue';
+    // import Carousel from '../components/carousel.vue';
 
     export default {
         data() {
@@ -251,208 +251,10 @@
             }
         },
         components: {
-            Appheader,
-            Loading,
-            Globalmodal,
-            Carousel
+            // Appheader,
+            // Loading,
+            // Globalmodal,
+            // Carousel
         },
     }
 </script>
-
-<style lang="sass">
-    .homepage {}
-    /*轮播图 --- start*/
-    .app-pagination{
-        bottom:5px !important;
-        padding-right: 10px;
-        text-align:right;
-        >span{
-             width: 25px;
-             height: 5px;
-             background:#888;
-             border-radius:0;
-             margin: 0 2px !important;
-         }
-    }
-    /*轮播图 --- end*/
-
-     /*TAB切换 --- start*/
-    .tab-menu{
-        position: relative;
-        padding:10px 0;
-        background: #fff;
-
-        .active a{color:#ff6666;}
-        &:before {
-              position: absolute;
-              top: 0;
-              left: 0;
-              left: 0;
-              width: 100%;
-              height: 1px;
-              border-top: 1px solid #d9d9d9;
-              color: #d9d9d9;
-              content: " ";
-              -webkit-transform: scaleY(.5);
-              transform: scaleY(.5);
-              -webkit-transform-origin: 0 0;
-              transform-origin: 0 0;
-        }
-
-        .tab-item:last-child a{
-            position: relative;
-            display: block;
-
-            &:before {
-                content:"";
-                display: block;
-                position: absolute;
-                top:0;
-                right:20%;
-                width: 0;
-                height: 0;
-                border-left: 4px solid transparent;
-                border-right: 4px solid transparent;
-                border-bottom: 7px solid #555;
-            }
-
-            &:after{
-                content:"";
-                display: block;
-                position: absolute;
-                bottom:0;
-                right:20%;
-                width: 0;
-                height: 0;
-                border-left: 4px solid transparent;
-                border-right: 4px solid transparent;
-                border-top: 7px solid #555;
-            }
-        }
-
-        .markUp{
-            &:before {border-bottom: 7px solid #ff6666 !important;}
-        }
-         .markDown{
-            &:after {border-top: 7px solid #ff6666 !important;}
-        }
-    }
-     /*TAB切换 --- end*/
-
-    /*列表区域 --- start*/
-    .main-container{
-        position: relative;
-        width: 100%;
-        margin-bottom: 55px;
-        overflow: hidden;
-    }
-    .itemBox{
-        overflow: hidden;
-        min-height: 450px;
-
-        .item:nth-child(even){
-            &:after {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 1px;
-                height: 100%;
-                border-right: 1px solid #d9d9d9;
-                color: #d9d9d9;
-                content: " ";
-                -webkit-transform: scaleX(.5);
-                transform: scaleX(.5);
-                -webkit-transform-origin: 0 0;
-                transform-origin: 0 0;
-            }
-         }
-
-        .item{
-            position: relative;
-            width: 50%;
-            float: left;
-           -webkit-box-sizing: border-box;
-           -ms-box-sizing: border-box;
-           -o-box-sizing: border-box;
-            box-sizing: border-box;
-            background: #fff;
-            padding:10px;
-
-            &:before {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 1px;
-              border-top: 1px solid #d9d9d9;
-              color: #d9d9d9;
-              content: " ";
-              -webkit-transform: scaleY(.5);
-              transform: scaleY(.5);
-              -webkit-transform-origin: 0 0;
-              transform-origin: 0 0;
-            }
-
-            a{display: block;}
-            img{ width: 100%;height: 100%; }
-            .info{
-                background: #fff;
-                height: 40px;
-               .title{font-size: 14px;line-height: 1.4;}
-            }
-
-            .msg{
-                width: 100%;
-                text-align: center;
-                display: -webkit-box;
-                display: -moz-box;
-                display: -o-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -webkit-align-items: center;
-                padding:6px 0;
-
-
-               .state{
-                    -moz-box-flex: 1;
-                    -webkit-box-flex: 1;
-                    -o-box-flex: 1;
-                    -ms-flex: 1;
-                    flex: 1;
-                    text-align:left;
-
-                    .percentage{ font-size: 12px; }
-                    .progress{
-                        display: block;
-                        overflow: hidden;
-                        width: 80%;
-                        height: 6px;
-                        border-radius:3px;
-                        background: #ddd;
-                    }
-                    .ongoing{
-                        display: block;
-                        // width: 50%;
-                        height: 6px;
-                        background:#ff6666;
-                    }
-                }
-            }
-
-            .btn{
-                .add{
-                    display: block;
-                    padding:2px 0;
-                    width: 60px;
-                    border-color: #ff6666;
-                    border-style: solid;
-                    border-width: 1px;
-                    border-radius:3px;
-                    color: #ff6666;
-                }
-             }
-        }
-    }
-    /*列表区域 --- end*/
-</style>

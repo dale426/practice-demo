@@ -4,6 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin'); //自动生成带hash的
 var ExtractTextPlugin = require("extract-text-webpack-plugin"); //独立样式文件
 var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin; //混淆压缩
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin; //检测重用模块
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 var utils = require('./utils');
 
@@ -34,8 +35,12 @@ var plugins = [
 //发布编译时，压缩，版本控制
 if (production) {
     // 清除之前的上线文件
-    utils.deleteFolder(__dirname + "/output/static/");
-
+    utils.deleteFolder(__dirname + "/dist/static/");
+    plugins.push(new CopyWebpackPlugin([{
+        from: path.resolve(__dirname, './src/assets/obj/'),
+        to: 'obj',
+        ignore: ['.*']
+    }]))
     //压缩
     plugins.push(new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }));
 
@@ -56,7 +61,7 @@ module.exports = {
     // 输出配置
     output: {
         // 输出路径是
-        path: path.join(__dirname, '/output/static'),
+        path: path.join(__dirname, '/dist/static'),
         publicPath: production ? "./static/" : "/static/",
         filename: production ? "js/build.[hash].js" : "build.js", //[hash]MD5戳解决html的资源的定位可以使用webpack提供的HtmlWebpackPlugin插件来解决这个问题  见：http://segmentfault.com/a/1190000003499526 资源路径切换
         chunkFilename: 'js/[id].[chunkhash].js'
@@ -79,12 +84,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 // loader: "css-loader?sourceMap!cssnext-loader"
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!cssnext-loader")
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             },
             {
-                test: /\.scss$/,
+                test: /\.less$/,
                 // loader: "css-loader?sourceMap!sass-loader!cssnext-loader"
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!sass-loader!cssnext-loader")
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader", "less-loader")
             },
             // 内联 base64 URLs, 限定 <=10k 的图片, 其他的用 URL
             {

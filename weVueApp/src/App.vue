@@ -7,25 +7,22 @@
 			<!-- :transition="effect" keep-alive -->
 		</div>
 
-		<!-- 导航 -->
-		<navbar v-if="isIndex"></navbar>
+<!-- 		<navbar v-if="isIndex"></navbar>
 
-		<!-- loading -->
 		<loading :show="loadshow"></loading>
 
-		<!-- toast -->
 		<toast v-ref:toast :toast.sync="toast">
 			<div slot="content">{{toast.content}}</div>
-		</toast>
+		</toast> -->
 
 	</div>
 </template>
 
 <script>
 
-	import Navbar from './views/common/Navbar.vue';
-	import Loading from './components/Loading.vue';
-	import Toast from './components/toast.vue';
+	// import Navbar from './views/common/Navbar.vue';
+	// import Loading from './components/Loading.vue';
+	// import Toast from './components/toast.vue';
 
 	export default {
 		data() {
@@ -44,11 +41,11 @@
 				transition.next();
 			}
 		},
-		components: {
-			Navbar,
-			Loading,
-			Toast
-		}
+		// components: {
+		// 	Navbar,
+		// 	Loading,
+		// 	Toast
+		// }
 	}
 </script>
 

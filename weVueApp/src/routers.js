@@ -3,113 +3,113 @@ export default function(router) {
         // 首页
         '/': {
             name: 'home',
-            component: require('./views/Home.vue')
+            component: require('./model/Home.vue')
         },
-        // 最新揭晓
-        '/announced': {
-            name: 'announced',
-            component(resolve) { require(['./views/Announced.vue'], resolve) }
+        // 3D页面
+        '/show3d': {
+            name: 'show3d',
+            component(resolve) { require(['./model/rowdate.vue'], resolve) }
         },
-        // 清单
-        '/cart': {
-            name: 'cart',
-            component(resolve) { require(['./views/Cart.vue'], resolve) }
-        },
-        // 个人中心
-        '/me': {
-            name: 'me',
-            component(resolve) { require(['./views/Me.vue'], resolve) },
-            subRoutes: {}
-        },
+        // // 清单
+        // '/cart': {
+        //     name: 'cart',
+        //     component(resolve) { require(['./views/Cart.vue'], resolve) }
+        // },
+        // // 个人中心
+        // '/me': {
+        //     name: 'me',
+        //     component(resolve) { require(['./views/Me.vue'], resolve) },
+        //     subRoutes: {}
+        // },
 
-        // 揭晓详情
-        '/announced/jDetail': {
-            name: 'jDetail',
-            component(resolve) { require(['./views/indiana/announcedDetail.vue'], resolve) }
-        },
-        // 夺宝详情
-        '/detail/goods': {
-            name: 'goods',
-            component(resolve) { require(['./views/indiana/Goods.vue'], resolve) }
-        },
-        // 图文详情
-        '/detail/graphic': {
-            name: 'graphic',
-            component(resolve) { require(['./views/indiana/Graphic.vue'], resolve) }
-        },
-        // 订单支付
-        '/orderPay': {
-            name: 'orderPay',
-            component(resolve) { require(['./views/list/Orderpay.vue'], resolve) }
-        },
-        // 订单结果
-        '/payResults': {
-            name: 'payResults',
-            component(resolve) { require(['./views/list/Payresults.vue'], resolve) }
-        },
-        // 个人资料
-        '/center/msg': {
-            name: 'msg',
-            component(resolve) { require(['./views/center/Personal.vue'], resolve) }
-        },
-        // 全部参与记录
-        '/center/allRecord': {
-            name: 'allRecord',
-            component(resolve) { require(['./views/center/Allrecord.vue'], resolve) }
-        },
-        // 中奖记录
-        '/center/winRecord': {
-            name: 'winRecord',
-            component(resolve) { require(['./views/center/Winrecord.vue'], resolve) }
-        },
-        // 我的红包
-        '/center/redPackets': {
-            name: 'redPackets',
-            component(resolve) { require(['./views/center/Redpackets.vue'], resolve) }
-        },
-        // 充值记录
-        '/center/rechargeRecord': {
-            name: 'rechargeRecord',
-            component(resolve) { require(['./views/center/Winconfirm.vue'], resolve) }
-        },
-        // 中奖确认
-        '/center/winConfirm': {
-            name: 'winConfirm',
-            component(resolve) { require(['./views/center/Winconfirm.vue'], resolve) }
-        },
-        // 地址列表
-        '/center/addressList': {
-            name: 'addressList',
-            component(resolve) { require(['./views/center/Addresslist.vue'], resolve) }
-        },
-        // 添加地址
-        '/center/addressEdit/': {
-            name: 'addressEdit',
-            component(resolve) { require(['./views/center/Addressedit.vue'], resolve) }
-        },
-        // 登陆注册手机绑定
-        '/user': {
-            name: 'user',
-            component: function(resolve) {
-                require(['./views/user/User.vue'], resolve)
-            },
-            subRoutes: {
-                '/login': {
-                    name: "login",
-                    component: require('./views/user/Login.vue')
-                },
-                '/register': {
-                    component: require('./views/user/Register.vue')
-                },
-                '/phonebind': {
-                    component: require('./views/user/PhoneBind.vue')
-                }
-            }
-        },
-        // 404
-        '*': {
-            component(resolve) { require(['./views/error/not_found.vue'], resolve) }
-        }
+        // // 揭晓详情
+        // '/announced/jDetail': {
+        //     name: 'jDetail',
+        //     component(resolve) { require(['./views/indiana/announcedDetail.vue'], resolve) }
+        // },
+        // // 夺宝详情
+        // '/detail/goods': {
+        //     name: 'goods',
+        //     component(resolve) { require(['./views/indiana/Goods.vue'], resolve) }
+        // },
+        // // 图文详情
+        // '/detail/graphic': {
+        //     name: 'graphic',
+        //     component(resolve) { require(['./views/indiana/Graphic.vue'], resolve) }
+        // },
+        // // 订单支付
+        // '/orderPay': {
+        //     name: 'orderPay',
+        //     component(resolve) { require(['./views/list/Orderpay.vue'], resolve) }
+        // },
+        // // 订单结果
+        // '/payResults': {
+        //     name: 'payResults',
+        //     component(resolve) { require(['./views/list/Payresults.vue'], resolve) }
+        // },
+        // // 个人资料
+        // '/center/msg': {
+        //     name: 'msg',
+        //     component(resolve) { require(['./views/center/Personal.vue'], resolve) }
+        // },
+        // // 全部参与记录
+        // '/center/allRecord': {
+        //     name: 'allRecord',
+        //     component(resolve) { require(['./views/center/Allrecord.vue'], resolve) }
+        // },
+        // // 中奖记录
+        // '/center/winRecord': {
+        //     name: 'winRecord',
+        //     component(resolve) { require(['./views/center/Winrecord.vue'], resolve) }
+        // },
+        // // 我的红包
+        // '/center/redPackets': {
+        //     name: 'redPackets',
+        //     component(resolve) { require(['./views/center/Redpackets.vue'], resolve) }
+        // },
+        // // 充值记录
+        // '/center/rechargeRecord': {
+        //     name: 'rechargeRecord',
+        //     component(resolve) { require(['./views/center/Winconfirm.vue'], resolve) }
+        // },
+        // // 中奖确认
+        // '/center/winConfirm': {
+        //     name: 'winConfirm',
+        //     component(resolve) { require(['./views/center/Winconfirm.vue'], resolve) }
+        // },
+        // // 地址列表
+        // '/center/addressList': {
+        //     name: 'addressList',
+        //     component(resolve) { require(['./views/center/Addresslist.vue'], resolve) }
+        // },
+        // // 添加地址
+        // '/center/addressEdit/': {
+        //     name: 'addressEdit',
+        //     component(resolve) { require(['./views/center/Addressedit.vue'], resolve) }
+        // },
+        // // 登陆注册手机绑定
+        // '/user': {
+        //     name: 'user',
+        //     component: function(resolve) {
+        //         require(['./views/user/User.vue'], resolve)
+        //     },
+        //     subRoutes: {
+        //         '/login': {
+        //             name: "login",
+        //             component: require('./views/user/Login.vue')
+        //         },
+        //         '/register': {
+        //             component: require('./views/user/Register.vue')
+        //         },
+        //         '/phonebind': {
+        //             component: require('./views/user/PhoneBind.vue')
+        //         }
+        //     }
+        // },
+        // // 404
+        // '*': {
+        //     component(resolve) { require(['./views/error/not_found.vue'], resolve) }
+        // }
     });
 
 
