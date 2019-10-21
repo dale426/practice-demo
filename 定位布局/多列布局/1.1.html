@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多列布局</title>
+</head>
+<style>
+	body, html{
+		margin: 0;
+		padding: 0;
+	}
+	
+	.left{
+		float: left;
+		width: 160px;
+		height: 400px;
+		background: pink;
+		margin-right: -100%;
+	}
+	.content{
+		width: 100%;
+		float: left;
+	}
+	.right{
+		margin-left: 180px;
+		background: #cc9;
+	}
+</style>
+<body>
+	<div class="left">左边固定</div>
+
+	<div class="content">
+		<div class="right">右边自适应右边自适应右边自适应右边自适应右边自适应</div>
+	</div>
+</body>
+</html>

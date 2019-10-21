@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多列布局</title>
+</head>
+<style>
+	body, html{
+		margin: 0;
+		padding: 0;
+	}
+	.content{
+		display: flex;
+	}
+	.left{
+		width: 160px;
+		height: 400px;
+		background: pink;
+	}
+	.right{
+		background: #cc9;
+		width: calc(100% - 160px);
+	}
+</style>
+<body>
+	<div class="content">
+		<div class="left">左边固定</div>
+		<div class="right">右边自适应右边自适应右边自适应右边自适应右边自适应</div>
+	</div>
+	
+</body>
+</html>
