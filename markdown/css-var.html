@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS变量</title>
+  <style>
+    :root {
+      --mt: 20;
+    }
+   
+    body {
+      --foo: 18px;
+      --bg: red;
+      --text: 'hello';
+      --co: var(--text)' world';
+    }
+    @media screen and (min-width: 768px) {
+      body {
+        --bg:  rgb(17, 236, 36);
+      }
+    }
+    .group2 {
+      background: var(--bg);
+    }
+    .group1 {
+      color: var(--co, green);
+    }
+    body::after {
+      content: var(--co)'--1234';
+    }
+    .group3 {
+      margin-top: calc(var(--mt) * 1px);
+    }
+
+  </style>
+</head>
+<body>
+  <div>CSS变量学习使用</div>
+  <div class="group1">CSS变量学习使用</div>
+  <div class="group2">CSS变量学习使用</div>
+  <div class="group3">CSS变量学习使用</div>
+</body>
+</html>

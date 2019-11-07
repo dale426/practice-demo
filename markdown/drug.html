@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <style type="text/css">
+        #div1, #div2 {
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            line-height:35px;
+        }
+    </style>
+<script type="text/javascript">
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    var srcdiv = null;
+    var temp = null;
+    //当拖动时触发
+    function drag(ev, divdom) {
+        srcdiv = divdom;
+        temp = divdom.innerHTML;
+      console.log('srcdiv', srcdiv, temp);
+      
+    }
+    //当拖动完后触发
+    function drop(ev, divdom) {
+        ev.preventDefault();
+        if (srcdiv !== divdom) {
+            srcdiv.innerHTML = divdom.innerHTML;
+            divdom.innerHTML = temp;
+        }
+    }
+</script>
+</head>
+<body>
+    <div id="div1" οndrοp="drop(event,this)" οndragοver="allowDrop(event)" draggable="true" οndragstart="drag(event, this)" style="background-color:#ff6a00;">
+            <p>我是第一！</p>
+        </div>
+    <div id="div2" οndrοp="drop(event,this)" οndragοver="allowDrop(event)" draggable="true" οndragstart="drag(event, this)" style="background-color:#00ff21;">
+            <p>那我第二。</p>
+        </div>
+</body>
+</html>
