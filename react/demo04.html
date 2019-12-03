@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Hello React!</title>
+  <!-- 开发版本 -->
+  <script crossorigin src='https://unpkg.com/react@16/umd/react.development.js'></script>
+  <script crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+  <!-- 生产环境中不建议使用 -->
+  <script src='https://unpkg.com/babel-standalone@6.15.0/babel.min.js'></script>
+  <style>
+    .demo {
+      color: yellowgreen;
+      font-size: 20px;
+    }
+
+    .content {
+      color: pink;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='app'></div>
+  <script type='text/babel'>
+    const mystyle = {
+      color: 'blue',
+      marginLeft: '20px',
+      fontSize: '28px'
+    }
+
+    const el = <div>
+      <h1 style={mystyle}>Hello, React!</h1>
+    </div>
+    ReactDOM.render(
+      el,
+      document.getElementById('app')
+    );
+  </script>
+</body>
+
+</html>

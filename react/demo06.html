@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Hello React!</title>
+  <!-- 开发版本 -->
+  <script crossorigin src='https://unpkg.com/react@16/umd/react.development.js'></script>
+  <script crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+  <!-- 生产环境中不建议使用 -->
+  <script src='https://unpkg.com/babel-standalone@6.15.0/babel.min.js'></script>
+</head>
+
+<body>
+  <div id='app'></div>
+  <script type='text/babel'>
+    const el = [
+      <h1 key="1">标题</h1>,
+      <h2 key="2">副标题</h2>,
+      <p key="3">正文</p>
+    ];
+    // const myarr = ['react', 'vue', 'angular']
+    ReactDOM.render(
+      <div>
+        <div>{el}</div>
+        <div>
+          {
+            /* myarr.map((item, index) => {
+            return <p key={index}>{index}-{item}</p>
+          }) */
+          }
+        </div>
+      </div>,
+      document.getElementById('app')
+    );
+  </script>
+</body>
+
+</html>

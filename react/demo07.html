@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Hello React!</title>
+  <!-- 开发版本 -->
+  <script crossorigin src='https://unpkg.com/react@16/umd/react.development.js'></script>
+  <script crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+  <!-- 生产环境中不建议使用 -->
+  <script src='https://unpkg.com/babel-standalone@6.15.0/babel.min.js'></script>
+</head>
+
+<body>
+  <div id='app'></div>
+  <script type='text/babel'>
+    function MyComponents(props) {
+      return <h1>我是一个组件，我的名字是： {props.name}</h1>
+    }
+    ReactDOM.render(
+      <MyComponents name="react"/>,
+      document.getElementById('app')
+    );
+  </script>
+</body>
+
+</html>

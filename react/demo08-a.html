@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Hello React!</title>
+  <!-- 开发版本 -->
+  <script crossorigin src='https://unpkg.com/react@16/umd/react.development.js'></script>
+  <script crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+  <!-- 生产环境中不建议使用 -->
+  <script src='https://unpkg.com/babel-standalone@6.15.0/babel.min.js'></script>
+</head>
+
+<body>
+  <div id='app'></div>
+  <script type='text/babel'>
+    // 登录组件
+    class Login extends React.Component {
+      render() {
+        return <div>登录页面</div>
+      }
+    }
+    // 注册组件
+    class Registry extends React.Component {
+      render() {
+        return <div>注册页面</div>
+      }
+    }
+
+    class Main extends React.Component {
+      constructor(props) {
+        super(props)
+      }
+      render() {
+        // 这里可以进行一些计算，来判断逻辑
+        if (this.props.hasAccount) {
+          return <Login />
+        } else {
+          return <Registry />
+        }
+      }
+    }
+    ReactDOM.render(
+      <div> <Main hasAccount={true}/> </div>,
+      document.getElementById('app')
+    );
+  </script>
+</body>
+
+</html>

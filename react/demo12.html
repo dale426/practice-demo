@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Hello React!</title>
+  <!-- 开发版本 -->
+  <script crossorigin src='https://unpkg.com/react@16/umd/react.development.js'></script>
+  <script crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+  <!-- 生产环境中不建议使用 -->
+  <script src='https://unpkg.com/babel-standalone@6.15.0/babel.min.js'></script>
+</head>
+
+<body>
+  <div id='app'></div>
+  <script type='text/babel'>
+    class Page extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          pageNo: 1
+        }
+        // this.test = this.test.bind(this)
+      }
+      test() {
+        console.log('this', this);   // undefined
+      }
+      // 上一页
+      prePage(e) {
+        e.preventDefault(); //阻止默认事件
+        this.setState({ pageNo: --this.state.pageNo })
+      }
+      // 箭头函数， 不会改变this的指向
+      nextPage = (e) => {
+        e.preventDefault(); //阻止默认事件
+        this.setState((preState) => {
+          return { pageNo: ++this.state.pageNo }
+        })
+      }
+
+      render() {
+        return <div>
+          <div><h2>当前页码是：{this.state.pageNo}</h2></div>
+          <div>
+            <button onClick={this.test}>测试按钮</button>
+            <button onClick={this.prePage.bind(this)}>上一页</button>
+            <button onClick={this.nextPage}>下一页</button>
+          </div>
+        </div>
+      }
+    }
+
+
+
+
+    ReactDOM.render(
+      <Page />,
+      document.getElementById('app')
+    );
+  </script>
+</body>
+
+</html>

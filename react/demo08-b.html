@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Hello React!</title>
+  <!-- 开发版本 -->
+  <script crossorigin src='https://unpkg.com/react@16/umd/react.development.js'></script>
+  <script crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+  <!-- 生产环境中不建议使用 -->
+  <script src='https://unpkg.com/babel-standalone@6.15.0/babel.min.js'></script>
+</head>
+
+<body>
+  <div id='app'></div>
+  <script type='text/babel'>
+    class Notice extends React.Component {
+      constructor(props) {
+        super(props)
+        this.state= {
+          count: 100
+        }
+      }
+      componentDidMount() {
+        setTimeout(() => {
+          this.setState({
+            count: 9
+          })
+        }, 1000);
+      }
+
+      render() {
+        return <div>
+          <h1>react训练营欢迎您</h1>
+          {this.state.count <= 10 && <p>您的积分已经不足，请及时完成学习任务</p>}
+        </div>
+      }
+    }
+
+    ReactDOM.render(
+      <div>
+        <h1>Hello, React!</h1>
+        <Notice />
+      </div>
+      ,
+      document.getElementById('app')
+    );
+  </script>
+</body>
+
+</html>

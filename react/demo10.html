@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Hello React!</title>
+  <!-- 开发版本 -->
+  <script crossorigin src='https://unpkg.com/react@16/umd/react.development.js'></script>
+  <script crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+  <!-- 生产环境中不建议使用 -->
+  <script src='https://unpkg.com/babel-standalone@6.15.0/babel.min.js'></script>
+  <style>
+    .tabs {
+      display: flex;
+    }
+
+    .tabs span {
+      margin-left: 10px;
+      color: #fff;
+      background: lightskyblue;
+      display: flex;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .content {
+      border: 4px solid seagreen;
+      min-height: 200px;
+      margin-top: 20px;
+    }
+
+    .content2 {
+      border: 4px salmon solid;
+      min-height: 200px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='app'></div>
+  <script type='text/babel'>
+    class UserCard extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          card: 1,
+          tangshi: [],
+          songci: []
+        }
+      }
+      componentDidMount() {
+        setTimeout(() => {
+          this.setState({
+            tangshi: [
+              '登鹳雀楼',
+              '白日依山尽，黄河入海流。',
+              '欲穷千里目，更上一层楼。'
+            ]
+          })
+        }, 3000)
+      }
+      // state数据变化，会触发render函数更新视图  
+      changeCard(flag) {
+        this.setState({
+          card: flag
+        })
+      }
+      render() {
+        const t = this.state.tangshi.map((item, index) => (<h4 key={index}>{item}</h4>))
+        return <div>
+          <div className="tabs">
+            <span onClick={this.changeCard.bind(this, 1)}>唐诗</span>
+            <span onClick={this.changeCard.bind(this, 2)}>宋词</span>
+          </div>
+          {this.state.card === 1
+            ?
+            <div className="content"><h1>唐诗</h1>{t}</div>
+            :
+            <div className="content2"><h1>宋词</h1></div>
+          }
+        </div>
+      }
+    }
+
+    ReactDOM.render(
+      <UserCard />,
+      document.getElementById('app')
+    );
+  </script>
+</body>
+
+</html>
