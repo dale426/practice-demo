@@ -25,16 +25,20 @@
         this.state = {
           pageNo: 1
         }
-        this.firstPage = this.firstPage.bind(this) // 第一种在构造函数中为函数绑定this
+        this.firstPage = this.firstPage.bind(this, 1) // 第一种在构造函数中为函数绑定this
       }
 
       // 第一页
-      firstPage() {
-        console.log('this', this);
+      // bind绑定的合成事件E会放在参数最后接受
+      firstPage(args, e) {
+        this.setState({ pageNo: args })
+        console.log('args', args, e);
       }
 
       // 上一页
-      prePage(e) {
+      // bind绑定的合成事件E会放在参数最后接受
+      prePage(args, e) {
+        console.log('args', args, e);
         e.preventDefault(); //阻止默认事件
         this.setState({ pageNo: --this.state.pageNo })
       }
@@ -49,8 +53,9 @@
         })
       }
       // 最后一页
-      lastPage(e) {
-        this.setState({ pageNo: 100 })
+      lastPage(e, args) {
+        console.log('args', e, args);
+        this.setState({ pageNo: args })
       }
 
       render() {
@@ -58,9 +63,10 @@
           <div><h2>当前页码是：{this.state.pageNo}</h2></div>
           <div>
             <button onClick={this.firstPage}>第一页</button>
-            <button onClick={this.prePage.bind(this)}>上一页</button> {/* 第1种方法变体 --绑定this */}
+            <button onClick={this.prePage.bind(this, "pre")}>上一页</button> {/* 第1种方法变体 --绑定this */}
+            {/* 下面统一一种方式传参 */}
             <button onClick={this.nextPage}>下一页</button>
-            <button onClick={() => { this.lastPage() }}>最后一页</button> {/* 第2种方法变体 箭头函数*/}
+            <button onClick={(e) => { this.lastPage(e, 100) }}>最后一页</button> {/* 第2种方法变体 箭头函数*/}
           </div>
         </div>
       }
