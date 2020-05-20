@@ -15,27 +15,25 @@
 <script type="text/javascript" src="renxi/functions.js" charset="utf-8"></script>
 <script type="text/javascript" src="renxi/love.js" charset="utf-8"></script>
 <style type="text/css">
-<!--
 .STYLE1 {
 	color: #666666
 }
--->
 </style>
 </head>
 <body>
-<audio autoplay="autopaly">
-  <source src="renxi.mp3" type="audio/mp3" />
+<audio id="bgMusic" style="display: none;" controls>
+  <source src="renxi.mp3"  type="audio/mp3" />
 </audio>
 <div id="main">
   <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
   <div id="wrap">
     <div id="text">
       <div id="code"> <font color="#FF0000"> <span class="say">六年</span><br>
-        <span class="say"> 天各一方</span><br>
+        <span class="say"> 一花一世界</span><br>
         <span class="say"> </span><br>
         <span class="say"> 时间这个东西真的很奇妙</span><br>
         <span class="say"> </span><br>
-        <span class="say">依稀记得上次见你还是去年大年初六的早上，</span><br>     
+        <!-- <span class="say">依稀记得上次见你还是去年大年初六的早上，</span><br>     
             <span class="say"> 时间真是把杀猪刀</span><br>
             <span class="say"> </span><br>
         <span class="say">对我还是那么狠</span><br>
@@ -49,15 +47,15 @@
              <span class="say"> 你告诉我</span><br>
              <span class="say"> 你是不是从天上来的，</span><br>
              <span class="say">不然你怎么会那么美 </span><br>
-        <span class="say"><span class="space"></span> -- 一个程序狗</span> </font>
+        <span class="say"><span class="space"></span> -- 一个程序狗</span> </font> -->
             <br />
             <br />
         </p>
       </div>
     </div>
     
-    <div id="clock-box"> <span class="STYLE1"></span><font color="#FF4500">老大，从你上火车算起，我们认识</font> <span class="STYLE1">已经是……</span>
-      <div id="clock"></div>
+    <div id="clock-box"> <span class="STYLE1"></span><font color="#FF4500">，我们认识</font> <span class="STYLE1">已经是……</span>
+      <div id="clock" style="color: gold"></div>
     </div>
     <canvas id="canvas" width="1100" height="680"></canvas>
   </div>
@@ -119,6 +117,9 @@
         var hold = 1;
 
         canvas.click(function (e) {
+            var audio = document.getElementById("bgMusic");
+            //播放(继续播放)
+            audio.play();
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
