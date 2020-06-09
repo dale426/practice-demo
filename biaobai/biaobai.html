@@ -16,45 +16,48 @@
 <script type="text/javascript" src="renxi/love.js" charset="utf-8"></script>
 <style type="text/css">
 .STYLE1 {
-	color: #666666
+	color: gold;
 }
 </style>
 </head>
 <body>
 <audio id="bgMusic" style="display: none;" controls>
-  <source src="renxi.mp3"  type="audio/mp3" />
+  <source src="youdiantian.mp3"  type="audio/mp3" />
 </audio>
 <div id="main">
   <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
   <div id="wrap">
     <div id="text">
-      <div id="code"> <font color="#FF0000"> <span class="say">六年</span><br>
-        <span class="say"> 一花一世界</span><br>
-        <span class="say"> </span><br>
-        <span class="say"> 时间这个东西真的很奇妙</span><br>
-        <span class="say"> </span><br>
-        <!-- <span class="say">依稀记得上次见你还是去年大年初六的早上，</span><br>     
-            <span class="say"> 时间真是把杀猪刀</span><br>
-            <span class="say"> </span><br>
-        <span class="say">对我还是那么狠</span><br>
+      <div id="code"> 
+          <font color="#fff"> 
+                <span class="say"> 与QQ书：</span><br>
                 <span class="say"> </span><br>
-        <span class="say">脸上的棱角已经变成一堆堆的肉</span><br>
+                <span class="say"> 一花一世界</span><br>
                 <span class="say"> </span><br>
-        <span class="say">我很绝望</span><br>
+                <span class="say"> 时间这个东西真的很奇妙</span><br>
                 <span class="say"> </span><br>
-        <span class="say">你看你还是那么美，</span><br>
-                <span class="say">哇！ </span><br>
-             <span class="say"> 你告诉我</span><br>
-             <span class="say"> 你是不是从天上来的，</span><br>
-             <span class="say">不然你怎么会那么美 </span><br>
-        <span class="say"><span class="space"></span> -- 一个程序狗</span> </font> -->
+                <span class="say"> 让我们在最美的年华里</span><br>
+                <span class="say"> </span><br>
+                <span class="say"> 相遇相识、相拥相知、相惜相伴</span><br>
+                <span class="say"> </span><br>
+                <span class="say"> 感谢苍穹感谢命运</span><br>
+                <span class="say"> </span><br>
+                <span class="say"> 纵使千言万语</span><br>
+                <span class="say"> </span><br>
+                <span class="say"> 也无法表达我对情感的万分之一</span><br>
+                <span class="say"> </span><br>
+                <span class="say"> 幸得识卿桃花面</span><br>
+                <span class="say"> </span><br>
+                <span class="say"> 从此阡陌多暖春</span><br>
+                <span class="say"> </span><br>
+                <span class="say"><span class="space"></span> -- 小虫子</span>
+            </font>
             <br />
             <br />
-        </p>
       </div>
     </div>
     
-    <div id="clock-box"> <span class="STYLE1"></span><font color="#FF4500">，我们认识</font> <span class="STYLE1">已经是……</span>
+    <div id="clock-box"> <span class="STYLE1"></span><font color="#fff">我们认识</font> <span class="STYLE1">已经是……</span>
       <div id="clock" style="color: gold"></div>
     </div>
     <canvas id="canvas" width="1100" height="680"></canvas>
@@ -123,6 +126,7 @@
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
+            
             if (seed.hover(x, y)) {
                 hold = 0;
                 canvas.unbind("click");
@@ -176,8 +180,9 @@
             tree.snapshot("p2", 500, 0, 610, 680);
 
             // 会有闪烁不得意这样做, (＞﹏＜)
+            canvas.parent().css("display", "block");
             canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-            canvas.css("background", "#ffe");
+            // canvas.css("background", "#ffe");
             $await(Jscex.Async.sleep(300));
             canvas.css("background", "none");
         }));
@@ -193,7 +198,7 @@
         }));
 
         var textAnimate = eval(Jscex.compile("async", function () {
-            var together = new Date("2018-12-14 20:00:00");
+            var together = new Date("2020-04-13 13:26:00");
             $("#code").show().typewriter();
             $("#clock-box").fadeIn(500);
             while (true) {
