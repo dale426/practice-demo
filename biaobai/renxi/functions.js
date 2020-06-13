@@ -15,6 +15,20 @@ $(window).resize(function() {
     }
 });
 
+
+var timeAnimate = eval(Jscex.compile("async", function () {
+	var together = new Date("2020-04-13 13:26:00");
+	$("#clock-box").fadeIn(700);
+	while (true) {
+			timeElapse(together);
+			$await(Jscex.Async.sleep(1000));
+	}
+}));
+
+var runAsync = eval(Jscex.compile("async", function () {
+	$await(timeAnimate());
+}));
+
 (function($) {
 	$.fn.typewriter = function() {
 		this.each(function() {
@@ -30,12 +44,17 @@ $(window).resize(function() {
 				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
 				if (progress >= str.length) {
 					clearInterval(timer);
+					// 执行最后的时间倒计时
+					runAsync().start();
 				}
-			}, 75);
+			}, 100);
 		});
 		return this;
 	};
 })(jQuery);
+
+
+
 
 function timeElapse(date){
 	var current = Date();

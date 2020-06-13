@@ -22,7 +22,7 @@
 </head>
 <body>
 <audio id="bgMusic" style="display: none;" controls>
-  <source src="youdiantian.mp3"  type="audio/mp3" />
+  <source src="qq.mp3"  type="audio/mp3" />
 </audio>
 <div id="main">
   <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
@@ -34,21 +34,21 @@
                 <span class="say"> </span><br>
                 <span class="say"> 一花一世界</span><br>
                 <span class="say"> </span><br>
-                <span class="say"> 时间这个东西真的很奇妙</span><br>
+                <span class="say"> 一生至少该有一次</span><br>
                 <span class="say"> </span><br>
-                <span class="say"> 让我们在最美的年华里</span><br>
+                <span class="say"> 为了某个人而忘了自己</span><br>
                 <span class="say"> </span><br>
-                <span class="say"> 相遇相识、相拥相知、相惜相伴</span><br>
+                <span class="say"> 不求有结果</span><br>
                 <span class="say"> </span><br>
-                <span class="say"> 感谢苍穹感谢命运</span><br>
+                <span class="say"> 不求同行</span><br>
                 <span class="say"> </span><br>
-                <span class="say"> 纵使千言万语</span><br>
+                <span class="say"> 不求曾经拥有</span><br>
                 <span class="say"> </span><br>
-                <span class="say"> 也无法表达我对情感的万分之一</span><br>
+                <span class="say"> 甚至不求你爱我</span><br>
                 <span class="say"> </span><br>
-                <span class="say"> 幸得识卿桃花面</span><br>
+                <span class="say"> 只求在我最美的年华里</span><br>
                 <span class="say"> </span><br>
-                <span class="say"> 从此阡陌多暖春</span><br>
+                <span class="say"> 遇到你</span><br>
                 <span class="say"> </span><br>
                 <span class="say"><span class="space"></span> -- 小虫子</span>
             </font>
@@ -198,22 +198,17 @@
         }));
 
         var textAnimate = eval(Jscex.compile("async", function () {
-            var together = new Date("2020-04-13 13:26:00");
             $("#code").show().typewriter();
-            $("#clock-box").fadeIn(500);
-            while (true) {
-                timeElapse(together);
-                $await(Jscex.Async.sleep(1000));
-            }
         }));
+
 
         var runAsync = eval(Jscex.compile("async", function () {
             $await(seedAnimate());
             $await(growAnimate());
             $await(flowAnimate());
             $await(moveAnimate());
-
-            textAnimate().start();
+            $await(textAnimate());
+           
 
             $await(jumpAnimate());
         }));
